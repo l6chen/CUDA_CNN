@@ -1,4 +1,4 @@
-﻿/*************************************************************************
+/*************************************************************************
 /* ECE 285: GPU Programmming 2019 Winter quarter
 /* Author and Instructer: Hou Wang
 /* Copyright 2019
@@ -546,7 +546,7 @@ namespace cnn {
 				int inputSize = inputShape[0] * inputShape[1] * inputShape[2];
 				int memsize = inputSize * batch_size;
 				/*
-				std::cout << "A_v:" << memsize << " " 
+				std::cout << "A_v: " << memsize << " " 
 					<< "TOTAL pix:" <<inputSize << " " 
 					<< "A.size:" << A.size() << " "
 					<< "Batchsize:" << batch_size << std::endl;
@@ -569,7 +569,6 @@ namespace cnn {
 				correctPred += correctPredict(A_final, Y_one_hot);
 				// compute grad from loss functions
 				float* dZ = computeLossGrad(A_final, Y_one_hot);
-				
 
 				// backward propgation
 				backwardPropagation(dZ, this->layers);
