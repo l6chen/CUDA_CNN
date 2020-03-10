@@ -175,7 +175,7 @@ namespace cnn {
 			bool isCorrect = false;
 			float max = FLT_MIN;
 			for (int i = 0; i < m; ++i) {
-				int idx = m * n + nIdx;
+				int idx = m * i + nIdx;
 				float cur = d_A[idx];
 				float curLabel = d_Y[idx];
 				if (cur > max) {
